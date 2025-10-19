@@ -15,7 +15,7 @@ function App() {
   return (
     <AuthProvider>
       <AlertProvider>
-        <Router>
+        <Router basename="/professor">
           <Routes>
             <Route path="/" element={<UserLogin />} />
 
