@@ -6,6 +6,7 @@ import { AlertContainer } from "./components/AlertContainer";
 import Home from "./pages/Home";
 import UserRegister from "./pages/UserRegister";
 import UserLogin from "./pages/UserLogin";
+import ClassViewProf from "./pages/ClassViewProf";
 
 function App() {
   return (
@@ -18,13 +19,25 @@ function App() {
               path="/home"
               element={
                 <PrivateRoute
-                  allowedTypes={["admin", "aluno"]}
+                  allowedTypes={["professor"]}
                   elementByType={{
                     professor: <Home />,
                   }}
                 />
               }
             />
+            <Route
+              path="/turmas"
+              element={
+                <PrivateRoute
+                  allowedTypes={["professor"]}
+                  elementByType={{
+                    professor: <ClassViewProf />,
+                  }}
+                />
+              }
+            />
+
             <Route path="/user/cadastro" element={<UserRegister />} />
           </Routes>
           <AlertContainer />
