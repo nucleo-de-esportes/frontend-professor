@@ -3,13 +3,9 @@ import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./components/AuthProvider";
 import { AlertProvider } from "./context/AlertContext";
 import { AlertContainer } from "./components/AlertContainer";
-import ClassForm from "./pages/ClassForm";
-import ClassViewAdm from "./pages/ClassViewAdm";
-import ClassEdit from "./pages/ClassEdit";
+import Home from "./pages/Home";
 import UserRegister from "./pages/UserRegister";
 import UserLogin from "./pages/UserLogin";
-import ClassView from "./pages/ClassView";
-import ClassEnrollmentForm from './pages/ClassEnrollmentForm'
 
 function App() {
   return (
@@ -18,42 +14,17 @@ function App() {
         <Router basename="/professor">
           <Routes>
             <Route path="/" element={<UserLogin />} />
-
             <Route
-              path="/cadastro/turma"
+              path="/home"
               element={
                 <PrivateRoute
                   allowedTypes={["admin", "aluno"]}
                   elementByType={{
-                    admin: <ClassForm />,
-                    aluno: <ClassEnrollmentForm />,
+                    professor: <Home />,
                   }}
                 />
               }
             />
-
-            <Route
-              path="/turmas"
-              element={
-                <PrivateRoute
-                  allowedTypes={["admin", "aluno"]}
-                  elementByType={{
-                    admin: <ClassViewAdm />,
-                    aluno: <ClassView />,
-                  }}
-                />
-              }
-            />
-
-            <Route
-              path="/editar/turma/:id"
-              element={
-                <PrivateRoute allowedTypes={["admin"]}>
-                  <ClassEdit />
-                </PrivateRoute>
-              }
-            />
-
             <Route path="/user/cadastro" element={<UserRegister />} />
           </Routes>
           <AlertContainer />
