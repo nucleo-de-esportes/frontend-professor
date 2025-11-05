@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import UserRegister from "./pages/UserRegister";
 import UserLogin from "./pages/UserLogin";
 import ClassViewProf from "./pages/ClassViewProf";
+import OneClassViewProf from "./pages/OneClassViewProf"
 
 function App() {
   return (
@@ -33,6 +34,17 @@ function App() {
                   allowedTypes={["professor"]}
                   elementByType={{
                     professor: <ClassViewProf />,
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/turma"
+              element={
+                <PrivateRoute
+                  allowedTypes={["professor"]}
+                  elementByType={{
+                    professor: <OneClassViewProf />,
                   }}
                 />
               }
