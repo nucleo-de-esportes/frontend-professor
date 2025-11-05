@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Calendar, User, CheckSquare, Square } from 'lucide-react';
+import MainContainer from '../components/MainContainer'
 
 interface Turma {
   id_turma: number;
@@ -96,8 +97,9 @@ const AttendanceSystem = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-100 p-8 flex flex-col">
-      <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
+    <MainContainer>
+    <div className="h-screen w-screen p-8 flex flex-col">
+      <div className="mx-auto w-full flex flex-col h-full">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
           BEM VINDO, PROF. LUIZ FELIPE III!
@@ -204,6 +206,7 @@ const AttendanceSystem = () => {
         </div>
       </div>
     </div>
+    </MainContainer>
   );
 };
 

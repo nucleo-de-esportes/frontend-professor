@@ -1,3 +1,5 @@
+import MainContainer from '../components/MainContainer'
+
 const TurmasGrid = () => {
   const turmas = [
     {
@@ -43,8 +45,9 @@ const TurmasGrid = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-6xl mx-auto">
+    <MainContainer>
+    <div className="h-screen w-screen p-8">
+      <div className="w-full h-full mx-auto">
         <h1 className="text-3xl font-bold text-gray-800 mb-8">
           TURMAS LECIONADAS
         </h1>
@@ -69,6 +72,7 @@ const TurmasGrid = () => {
         </div>
       </div>
     </div>
+    </MainContainer>
   );
 };
 
