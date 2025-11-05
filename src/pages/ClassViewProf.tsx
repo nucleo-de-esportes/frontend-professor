@@ -45,30 +45,32 @@ const TurmasGrid = () => {
   ];
 
   return (
-    <MainContainer>
+<MainContainer>
     <div className="h-screen w-screen p-8">
       <div className="w-full h-full mx-auto">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">
+        <h1 className="text-3xl font-bold text-[#340C2F] mb-8">
           TURMAS LECIONADAS
         </h1>
         
-        <div className="grid grid-cols-3 gap-6">
-          {turmas.map((turma) => (
-            <div
-              key={turma.id_turma}
-              className="bg-white border-2 border-gray-300 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200"
-            >
-              <h2 className="text-xl font-bold text-gray-800 mb-2">
-                {turma.sigla} - {turma.modalidade}
-              </h2>
-              <div className="space-y-1 text-gray-700">
-                <p className="font-medium">{turma.dia_semana}</p>
-                <p className="font-medium">
-                  {turma.hora_inicio}-{turma.hora_fim}/{turma.local}
-                </p>
+        <div className="w-[90%] mx-auto">
+          <div className="grid grid-cols-3 gap-6">
+            {turmas.map((turma) => (
+              <div
+                key={turma.id_turma}
+                className="bg-white border-1 border-[#340C2F] rounded-lg p-6 hover:shadow-lg transition-shadow duration-200"
+              >
+                <h2 className="text-xl font-bold text-[#340C2F] mb-2">
+                  {turma.sigla} - {turma.modalidade}
+                </h2>
+                <div className="space-y-1 text-[#340C2F]">
+                  <p className="font-medium">{turma.dia_semana}</p>
+                  <p className="font-medium">
+                    {turma.hora_inicio}-{turma.hora_fim}/{turma.local}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
