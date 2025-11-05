@@ -17,7 +17,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Turmas", path: "/turmas", allowedRoles: ["professor"] },
-    { name: "Nova Turma", path: "/cadastro/turma", allowedRoles: ["professor"] },
+    { name: "Turma", path: "/turma", allowedRoles: ["professor"] },
   ];
 
   return (
