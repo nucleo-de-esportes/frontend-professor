@@ -16,8 +16,8 @@ const Header = () => {
   const shouldHideMenu = hiddenMenuRoutes.includes(location.pathname);
 
   const navLinks = [
-    { name: "Turmas", path: "/turmas", allowedRoles: ["admin", "aluno"] },
-    { name: "Nova Turma", path: "/cadastro/turma", allowedRoles: ["admin", "aluno"] },
+    { name: "Turmas", path: "/turmas", allowedRoles: ["professor"] },
+    { name: "Nova Turma", path: "/cadastro/turma", allowedRoles: ["professor"] },
   ];
 
   return (
