@@ -9,6 +9,7 @@ import UserLogin from "./pages/UserLogin";
 import ClassViewProf from "./pages/ClassViewProf";
 import OneClassViewProf from "./pages/OneClassViewProf"
 import AvisosPage from "./pages/AvisosPage";
+import EscreverAvisos from "./pages/EscreverAvisos";
 
 function App() {
   return (
@@ -57,6 +58,17 @@ function App() {
                   allowedTypes={["professor"]}
                   elementByType={{
                     professor: <AvisosPage />,
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/escreverAviso"
+              element={
+                <PrivateRoute
+                  allowedTypes={["professor"]}
+                  elementByType={{
+                    professor: <EscreverAvisos />,
                   }}
                 />
               }

@@ -1,8 +1,15 @@
 import MainContainer from '../components/MainContainer';
 import { PenLine } from 'lucide-react';
 import Button from '../components/Button';
+import { useNavigate } from 'react-router-dom'
 
 export default function SeusAvisos() {
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate('/EscreverAviso');
+      };
+
     return (
       <MainContainer>
         <div className="h-full w-full p-8">
@@ -24,7 +31,7 @@ export default function SeusAvisos() {
 
             <div className='flex w-full justify-end'>
                 <div>
-                    <Button icon={PenLine} text='Escrever' size='lg'/>
+                    <Button icon={PenLine} text='Escrever' size='lg' onClick={handleClick}/>
                 </div>
             </div>
           </div>
