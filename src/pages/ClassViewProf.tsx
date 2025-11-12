@@ -46,7 +46,7 @@ const TurmasGrid = () => {
 
   return (
 <MainContainer>
-    <div className="h-screen w-screen p-8">
+    <div className="h-full w-full p-8">
       <div className="w-full h-full mx-auto">
         <h1 className="text-3xl font-bold text-[#340C2F] mb-8">
           TURMAS LECIONADAS

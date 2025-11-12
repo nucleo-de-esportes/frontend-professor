@@ -98,7 +98,7 @@ const AttendanceSystem = () => {
 
   return (
     <MainContainer>
-    <div className="h-screen w-screen p-8 flex flex-col">
+    <div className="h-full w-full p-8 flex flex-col">
       <div className="mx-auto w-full flex flex-col h-full">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
