@@ -17,7 +17,7 @@ export default function AttendanceList() {
 
   return (
     <MainContainer>
-    <div className="w-screen h-screen flex items-center justify-center p-4">
+    <div className="w-full h-full flex items-center justify-center p-4">
       <div className="w-full h-full max-w-4xl bg-white p-8">
         {/* Header */}
         <div className="mb-8">
