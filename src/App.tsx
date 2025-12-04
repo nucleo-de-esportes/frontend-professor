@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 import { AuthProvider } from "./components/AuthProvider";
 import { AlertProvider } from "./context/AlertContext";
 import { AlertContainer } from "./components/AlertContainer";
@@ -17,7 +18,14 @@ function App() {
       <AlertProvider>
         <Router basename="/professor">
           <Routes>
-            <Route path="/" element={<UserLogin />} />
+            <Route
+              path="/"
+              element={
+                <PublicRoute>
+                  <UserLogin />
+                </PublicRoute>
+              }
+            />
             <Route
               path="/home"
               element={
@@ -74,7 +82,14 @@ function App() {
               }
             />
 
-            <Route path="/user/cadastro" element={<UserRegister />} />
+            <Route
+              path="/user/cadastro"
+              element={
+                <PublicRoute>
+                  <UserRegister />
+                </PublicRoute>
+              }
+            />
           </Routes>
           <AlertContainer />
         </Router>
